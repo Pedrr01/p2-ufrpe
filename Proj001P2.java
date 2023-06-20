@@ -6,7 +6,6 @@ public class Proj001P2 {
 
         while(true) {
         
-        System.out.println("-------- Anakin Além do Tempo --------");
         introducao();
         System.out.print("Digite uma letra: ");
         String caminho = scan.nextLine();
@@ -29,19 +28,20 @@ public class Proj001P2 {
             System.out.println("Opção Inválida");
         }
 
-        System.out.println("\n\n---------------------------------------------------");
+        System.out.println("\n\n--------------------------------------------------------------------------------");
         System.out.print("Deseja voltar para o inicio da historia?"
         +"\na) SIM\nb) NÃO\nDigite sua escolha:");
         String opc = scan.nextLine();
         if(opc.equals("b") || opc.equals("B")){
             break;
         }
-        System.out.println("\n---------------------------------------------------");
+        System.out.println("\n--------------------------------------------------------------------------------");
         }
     }
 
     static void introducao() {
-        System.out.println("   Era uma vez uma cidade chamada Naboo, que vivia sob um forte regime"
+        System.out.println("------------------------------ Anakin Além do Tempo ------------------------------");
+        System.out.println("\n   Era uma vez uma cidade chamada Naboo, que vivia sob um forte regime"
                 +"\nimperial, nela se encontrava um jovem conhecido por Anakin, um rapaz curioso em busca incessante"
                 +"\nde aventuras e enigmas a desvendar. Em um determinado dia, durante sua exploração no sótão da"
                 +"\nantiga residência de seu avô, ele deparou-se com uma série de escritos e um objeto peculiar"
@@ -59,7 +59,7 @@ public class Proj001P2 {
 
     }
     static void futuro() {
-        System.out.println("\n-------- FUTURO --------");
+        System.out.println("\n------------------------------>>>>>>>>> FUTURO <<<<<<<<<------------------------------");
         System.out.println("\n\n   Anakin, curioso e tendo esperança de mudar a sociedade, decidiu usar o dispositivo"
                 +"\nde viagem temporal para explorar o futuro." 
                 +"\nDeterminado a usar esse conhecimento para mudar seu proprio tempo, Anakin começou a"
@@ -79,7 +79,7 @@ public class Proj001P2 {
                 );
     }   
     static void passado() {
-        System.out.println("\n-------- PASSADO --------");
+        System.out.println("\n------------------------------>>>>>>>>> PASSADO <<<<<<<<<------------------------------");
         System.out.println("\n\n   Anakin pensou cuidadosamente sobre sua escolha, consciente de que viajar para o passado e"
                 +"\nintervir em eventos historicos poderia ter consequencias imprevisiveis. No entanto, a oportunidade de" 
                 +"\npresenciar em primeira mão os eventos que levaram a criação do Imperio Galactico despertou" 
@@ -100,7 +100,7 @@ public class Proj001P2 {
                 );
     }
     static void intervir() {
-        System.out.println("\n-------- Anakin Tenta Imperdir a Ascenção do Imperio --------");
+        System.out.println("\n------------------------------ Anakin Tenta Imperdir a Ascenção do Imperio ------------------------------");
         System.out.println("Impulsionado por seu senso de justiça e determinação, Anakin decidiu intervir e tentar impedir a" 
                 +"\ncriação do Império Galáctico. Ele sabia que essa era uma missão desafiadora e cheia de incertezas, mas estava" 
                 +"\ndisposto a arriscar tudo para lutar pela liberdade e pela paz. Anakin começou sua jornada trabalhando nos bastidores,"
@@ -125,7 +125,7 @@ public class Proj001P2 {
                 );
     }
     static void naointervir() {
-        System.out.println("\n-------- Anakin Decidi Apenas Observar --------");
+        System.out.println("\n------------------------------ Anakin Decidi Apenas Observar ------------------------------");
         System.out.println("\n\n   Apesar de sentir uma forte vontade de intervir e tentar impedir a criação do Imperio Galactico," 
                 +"\nAnakin decidiu respeitar a linha do tempo estabelecida e optou por observar de longe, sem interferir diretamente nos eventos que" 
                 +"\nlevariam à ascensão do Imperio. Anakin compreendeu que mesmo suas melhores intenções poderiam desencadear" 

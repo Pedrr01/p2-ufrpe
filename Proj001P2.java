@@ -3,8 +3,9 @@ import java.util.Scanner;
 public class Proj001P2 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        String cond = "";
 
-        while(true) {
+        do {
         
         introducao();
         System.out.print("Digite uma letra: ");
@@ -31,12 +32,11 @@ public class Proj001P2 {
         System.out.println("\n\n--------------------------------------------------------------------------------");
         System.out.print("Deseja voltar para o inicio da historia?"
         +"\na) SIM\nb) NÃO\nDigite sua escolha:");
-        String opc = scan.nextLine();
-        if(opc.equals("b") || opc.equals("B")){
-            break;
-        }
+        cond = scan.nextLine();
+     
         System.out.println("\n--------------------------------------------------------------------------------");
         }
+        while(cond.equals("a") || cond.equals("A"));
     }
 
     static void introducao() {

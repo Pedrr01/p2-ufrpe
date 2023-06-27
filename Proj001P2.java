@@ -60,22 +60,22 @@ public class Proj001P2 {
     }
     static void futuro() {
         System.out.println("\n------------------------------>>>>>>>>> FUTURO <<<<<<<<<------------------------------");
-        System.out.println("\n\n   Anakin, curioso e tendo esperança de mudar a sociedade, decidiu usar o dispositivo"
-                +"\nde viagem temporal para explorar o futuro." 
-                +"\nDeterminado a usar esse conhecimento para mudar seu proprio tempo, Anakin começou a"
-                +"\nbuscar novas experiências, pesquisando os avanços cientificos e tecnologicos. Ele fez amizade com"
-                +"\nos lideres da resistencia local, compartilhando sua historia e seu desejo de derrotar o regime"
-                +"\nimperial em seu proprio tempo. Com a ajuda dos novos aliados, Anakin foi capaz de aprimorar o"
-                +"\ndispositivo de viagem temporal, incorporando as tecnologias futuristicas que descobriu." 
-                +"\nEle aprendeu sobre novas estrategias de combate, comunicação avançada e tecnicas de resistencia." 
-                +"\nQuando o momento certo chegou, Anakin, agora equipado com conhecimentos e tecnologias do futuro,"
-                +"\nativou o dispositivo e voltou para sua propria era. Ele sabia que tinha uma missão importante a cumprir."
-                +"\nCom suas novas habilidades e o apoio de rebeldes, Anakin liderou uma resistencia contra"
-                +"\no regime imperial em Naboo. Eles conseguiram enfraquecer o imperio e restaurar a democracia" 
-                +"\nna cidade. Anakin se tornou um heroi, trazendo esperança e coragem para o povo de Naboo." 
-                +"\nSua aventura no futuro mudou o destino da cidade, derrubando o imperio e estabelecendo um governo justo."
-                +"\nA historia de Anakin é uma prova de que um indiviu determinado pode fazer a diferença"
-                +"\ne lutar por um mundo melhor." 
+        System.out.println("\n\n   Anakin, curioso e tendo esperança de mudar a sociedade, decidiu usar o dispositivo de 
+                viagem temporal para explorar o futuro. Determinado a usar esse conhecimento para mudar seu proprio tempo, Anakin começou a buscar novas experi\u00EAncias, 
+                pesquisando os avanços cientificos e tecnologicos. Ele fez amizade com os lideres da resist\u00EAncia local, 
+                compartilhando sua historia e seu desejo de derrotar o regime imperial em seu proprio tempo. Com a ajuda dos novos aliados, 
+                Anakin foi capaz de aprimorar o dispositivo de viagem temporal, incorporando as tecnologias futur\u00EDsticas que descobriu. 
+                Ele aprendeu sobre novas estrat\u00E9gias de combate, comunica\u00E7\u00E3o avan\u00E7ada e t\u00E9cnicas de resist\u00EAncia.\r\n" 
+                "Quando o momento certo chegou, Anakin, agora equipado com conhecimentos e tecnologias do futuro, ativou 
+                o dispositivo e voltou para sua pr\u00F3pria era. Ele sabia que tinha uma miss\u00E3o importante a cumprir.
+                Com suas novas habilidades e o apoio dos rebeldes, Anakin liderou uma resist\u00EAncia contra o regime imperial em Naboo. 
+                Eles conseguiram enfraquecer o imp\u00E9rio e restaurar a democracia na cidade.\r\n" 
+                "Anakin se tornou um her\u00F3i, trazendo esperan\u00E7a e coragem para o povo de Naboo. Sua aventura no futuro mudou o destino da cidade, 
+                derrubando o imp\u00E9rio e estabelecendo um governo justo. Com as tecnologias e estrat\u00E9gias do futuro, Anakin e seus aliados
+                conseguiram neutralizar Darth Sidious e acabar com seu reinado de tirania."
+                "A derrota de Darth Sidious teve repercuss\u00F5es em toda a gal\u00E1xia. A resist\u00EAncia inspirada por Anakin se espalhou, 
+                levando \u00E0 queda do imp\u00E9rio gal\u00E1ctico em v\u00E1rios sistemas estelares. Os planetas oprimidos come\u00E7aram 
+                a se unir e a lutar contra a opress\u00E3o imperial, seguindo o exemplo de Naboo." 
                 );
     }   
     static void passado() {

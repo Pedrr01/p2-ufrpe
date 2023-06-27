@@ -3,40 +3,61 @@ import java.util.Scanner;
 public class Proj001P2 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        String cond = "";
+        // Condição para o while:
+        String cond = ""; 
+
+        // Personagens:
+        Personagem anakin = new Personagem("Anakin", 2022,"vivo","sabre de luz");
+        Personagem darthSidious = new Personagem("Darth Sidious", 2080, "vivo","sabre de luz" );
+        Personagem condeDookan = new Personagem("Conde Dookan", 1964, "vivo","arma  de íon");
 
         do {
         
+        // Chama o começo da historia e a escolha do leitor:
         introducao();
         System.out.print("Digite uma letra: ");
         String caminho = scan.nextLine();
 
+        // Opção de escolha para o PASSADO:
         if(caminho.equals("a") || caminho.equals("A")){
             passado();
             System.out.print("Digite uma letra: ");
             String caminhopass = scan.nextLine();
 
+            // Opção de escolha para INTERVIR:
             if(caminhopass.equals("a") || caminhopass.equals("A")){
                 intervir();
+                condeDookan.morrer("morte", 1964);
+                anakin.armamento("sabre de luz");
 
+
+            // Opção de escolha para apenas OBSEVAR:
             }else if(caminhopass.equals("b") || caminhopass.equals("B")){
                 naointervir();
+                anakin.morrer("morte", 1964);
+                condeDookan.armamento("arma de íon");
             }
 
+        // Opção de escolha para o FUTURO:   
         }else if(caminho.equals("b") || caminho.equals("B")){
             futuro();
+            darthSidious.morrer("morte", 2010);
+            anakin.armamento("sabre negro");
+        
+        // Caso o leitor digite o comando errado:
         }else{
             System.out.println("Opção Inválida");
         }
 
+        // Condição para INTERROMPER o while:
         System.out.println("\n\n--------------------------------------------------------------------------------");
         System.out.print("Deseja voltar para o inicio da historia?"
         +"\na) SIM\nb) NÃO\nDigite sua escolha:");
         cond = scan.nextLine();
-     
         System.out.println("\n--------------------------------------------------------------------------------");
         }
         while(cond.equals("a") || cond.equals("A"));
+        scan.close();
     }
 
     static void introducao() {
@@ -60,22 +81,21 @@ public class Proj001P2 {
     }
     static void futuro() {
         System.out.println("\n------------------------------>>>>>>>>> FUTURO <<<<<<<<<------------------------------");
-        System.out.println("\n\n   Anakin, curioso e tendo esperança de mudar a sociedade, decidiu usar o dispositivo de 
-                viagem temporal para explorar o futuro. Determinado a usar esse conhecimento para mudar seu proprio tempo, Anakin começou a buscar novas experi\u00EAncias, 
-                pesquisando os avanços cientificos e tecnologicos. Ele fez amizade com os lideres da resist\u00EAncia local, 
-                compartilhando sua historia e seu desejo de derrotar o regime imperial em seu proprio tempo. Com a ajuda dos novos aliados, 
-                Anakin foi capaz de aprimorar o dispositivo de viagem temporal, incorporando as tecnologias futur\u00EDsticas que descobriu. 
-                Ele aprendeu sobre novas estrat\u00E9gias de combate, comunica\u00E7\u00E3o avan\u00E7ada e t\u00E9cnicas de resist\u00EAncia.\r\n" 
-                "Quando o momento certo chegou, Anakin, agora equipado com conhecimentos e tecnologias do futuro, ativou 
-                o dispositivo e voltou para sua pr\u00F3pria era. Ele sabia que tinha uma miss\u00E3o importante a cumprir.
-                Com suas novas habilidades e o apoio dos rebeldes, Anakin liderou uma resist\u00EAncia contra o regime imperial em Naboo. 
-                Eles conseguiram enfraquecer o imp\u00E9rio e restaurar a democracia na cidade.\r\n" 
-                "Anakin se tornou um her\u00F3i, trazendo esperan\u00E7a e coragem para o povo de Naboo. Sua aventura no futuro mudou o destino da cidade, 
-                derrubando o imp\u00E9rio e estabelecendo um governo justo. Com as tecnologias e estrat\u00E9gias do futuro, Anakin e seus aliados
-                conseguiram neutralizar Darth Sidious e acabar com seu reinado de tirania."
-                "A derrota de Darth Sidious teve repercuss\u00F5es em toda a gal\u00E1xia. A resist\u00EAncia inspirada por Anakin se espalhou, 
-                levando \u00E0 queda do imp\u00E9rio gal\u00E1ctico em v\u00E1rios sistemas estelares. Os planetas oprimidos come\u00E7aram 
-                a se unir e a lutar contra a opress\u00E3o imperial, seguindo o exemplo de Naboo." 
+        System.out.println("\n\n    Anakin, curioso e tendo esperança de mudar a sociedade, decidiu usar o dispositivo de"
+            +"\nviagem temporal para explorar o futuro. Determinado a usar esse conhecimento para mudar seu próprio tempo, Anakin começou"
+            +"\na buscar novas experiências, pesquisando os avanços científicos e tecnológicos. Ele fez amizade com os líderes da"
+            +"\nresistência local, compartilhando sua história e seu desejo de derrotar o regime imperial em seu próprio tempo."
+            +"\nCom a ajuda dos novos aliados, Anakin foi capaz de aprimorar o dispositivo de viagem temporal, incorporando as tecnologias"
+            +"\nfuturísticas que descobriu. Ele aprendeu  sobre novas estratégias de combate, comunicação avançada e técnicas de resistência."
+            +"\nQuando o momento certo chegou, Anakin, agora equipado com conhecimentos e tecnologias do futuro, ativou o dispositivo"
+            +"\ne voltou para sua própria era. Ele sabia que tinha uma missão importante a cumprir. Com suas novas habilidades e o apoio dos" 
+            +"\nrebeldes, Anakin liderou uma resistência contra o regime imperial em Naboo. Eles conseguiram enfraquecer o império e restaurar"
+            +"\na democracia na cidade. Anakin se tornou um herói, trazendo esperança e coragem para o povo de Naboo. Sua aventura no futuro"
+            +"\nmudou o destino da cidade, derrubando o império e estabelecendo um governo justo. Com as tecnologias e estratégias do futuro,"
+            +"\nAnakin e seus aliados conseguiram neutralizar Darth Sidious e acabar com seu reinado de tirania. A derrota de Darth Sidious"
+            +"\nteve repercussões em toda a galáxia. A resistência inspirada por Anakin se espalhou, levando à queda do império galáctico"
+            +"\nem vários sistemas estelares. Os planetas oprimidos começaram a se unir e a lutar contra a opressão imperial, seguindo o"
+            +"\nexemplo de Naboo."
                 );
     }   
     static void passado() {
@@ -101,51 +121,33 @@ public class Proj001P2 {
     }
     static void intervir() {
         System.out.println("\n------------------------------ Anakin Tenta Imperdir a Ascenção do Imperio ------------------------------");
-        System.out.println("Impulsionado por seu senso de justiça e determinação, Anakin decidiu intervir e tentar impedir a" 
-                +"\ncriação do Império Galáctico. Ele sabia que essa era uma missão desafiadora e cheia de incertezas, mas estava" 
-                +"\ndisposto a arriscar tudo para lutar pela liberdade e pela paz. Anakin começou sua jornada trabalhando nos bastidores,"
-                +"\ninfiltrando-se em organizações e reunindo informações para desmascarar a corrupção que permeava a República."
-                +"\nEle utilizou seu conhecimento do futuro para se antecipar aos eventos e evitar a ascensão dos líderes autoritários" 
-                +"\nque seriam responsáveis pela criação do Império. Com astúcia e habilidade, Anakin formou alianças com outros indivíduos"
-                +"\ndeterminados a desafiar o domínio opressivo que se aproximava. Juntos, eles trabalharam incansavelmente para despertar a" 
-                +"\nconsciência das pessoas e promover mudanças significativas dentro da República. As ações de Anakin começaram a gerar resultados."
-                +"\nSeu esforço incansável inspirou outros a se levantarem contra a tirania, e uma resistência cresceu em toda a galáxia." 
-                +"\nAs forças do Império começaram a se enfraquecer, enquanto a esperança de um futuro livre se espalhava entre os oprimidos."
-                +"\nNo clímax da batalha, Anakin liderou um ataque final contra as forças imperiais, utilizando sua destreza e habilidades" 
-                +"\núnicas para enfrentar os líderes mais temidos. Com bravura e determinação, ele conseguiu desativar a arma final do Império,"
-                +"\ndesmantelando seu poderoso domínio e restaurando a paz na galáxia."
-                +"\nA derrota do Império Galáctico foi um marco histórico, graças à coragem e à ousadia de Anakin. Sua intervenção no passado" 
-                +"\nmudou o curso da história e salvou inúmeras vidas. O futuro da galáxia foi moldado de uma maneira nova e promissora,"
-                +"\nem que a liberdade e a justiça prevaleceram."
-                +"\nAnakin se tornou um símbolo de esperança e inspiração para muitos, e seu legado perdurou por gerações." 
-                +"\nSua coragem e determinação em desafiar o destino demonstraram que, com ações corretas e a vontade de lutar pelo que é certo," 
-                +"\nqualquer um pode fazer a diferença, mesmo nos momentos mais sombrios."
-                +"\nE assim, a história de Anakin, o jovem curioso de Naboo, que embarcou em uma aventura através do tempo, culminou em um" 
-                +"\nfinal memorável, marcado pela vitória sobre a opressão e pela restauração da liberdade na galáxia."
+        System.out.println("\n\n  Impulsionado por seu senso de justiça e determinação, Anakin decidiu intervir e tentar impedir a criação do" 
+                +"\nImpério Galáctico. Após se infiltrar em organizações e reunir informações, ele descobriu que o Conde Dookan era peça-chave nos" 
+                +"\nplanos dos líderes autoritários. Determinado a interromper seus planos malignos, Anakin traçou um plano para confrontar o"
+                +"\nConde Dookan e desativar sua influência sobre a República. Com astúcia e habilidade, Anakin formou alianças com outros indivíduos" 
+                +"\nigualmente determinados a desafiar o domínio opressivo. Juntos, eles trabalharam incansavelmente para despertar a consciência"
+                +"\ndas pessoas e promover mudanças significativas dentro da República. Com o apoio crescente da resistência, Anakin se preparou"
+                +"\npara o confronto final com o Conde Dookan. No clímax da batalha, Anakin liderou um ataque naudacioso contra as forças do Conde Dookan."
+                +"\nUtilizando sua destreza e habilidades únicas, nele enfrentou o Conde e seus seguidores com coragem e determinação."
+                +"\nCom uma luta intensa, Anakin conseguiu superar os obstáculos ne finalmente derrotar o Conde Dookan. A derrota do Conde Dookan" 
+                +"\nteve um impacto significativo na criação do Império Galáctico."
+                +"\nSem o líder habilidoso e manipulador, os planos autoritários foram desestabilizados. A resistência cresceu ainda mais, inspirada" 
+                +"\npela coragem de Anakin e pela vitória sobre o Conde Dookan. A intervenção de Anakin no passado alterou completamente o curso da"
+                +"\nhistória, salvando inúmeras vidas e evitando a criação do Império Galáctico. Sua coragem e ousadia foram fundamentais para a" 
+                +"\nrestauração da paz na galáxia."
                 );
     }
     static void naointervir() {
         System.out.println("\n------------------------------ Anakin Decidi Apenas Observar ------------------------------");
-        System.out.println("\n\n   Apesar de sentir uma forte vontade de intervir e tentar impedir a criação do Imperio Galactico," 
-                +"\nAnakin decidiu respeitar a linha do tempo estabelecida e optou por observar de longe, sem interferir diretamente nos eventos que" 
-                +"\nlevariam à ascensão do Imperio. Anakin compreendeu que mesmo suas melhores intenções poderiam desencadear" 
-                +"\nconsequencias imprevisiveis e potencialmente piores. Ele reconheceu que a historia é um resultado complexo de" 
-                +"\ndiversos fatores e que tentar altera-la poderia ter ramificações negativas para a galaxia." 
-                +"\nAssim, Anakin permaneceu como um observador atento, estudando os acontecimentos que levaram a criação do Imperio Galactico." 
-                +"\nEle documentou as injustiças, as corrupções e os erros cometidos, mantendo-se vigilante para aprender com os erros do" 
-                +"\npassado e garantir que não se repetissem no futuro." 
-                +"\nPor meio de sua observação, Anakin reuniu um vasto conhecimento sobre a historia e as lições que ela ensinava." 
-                +"\nEle compartilhou esse conhecimento com outras pessoas, na esperança de que, ao compreender os erros do passado, a galaxia pudesse" 
-                +"\nevitar repeti-los no futuro." 
-                +"\nEmbora Anakin não tenha interferido diretamente nos eventos, sua sabedoria e perspicacia influenciaram muitos que lutavam" 
-                +"\npela liberdade e justiça. Suas historias e ensinamentos se tornaram lendas, inspirando gerações futuras a resistir"
-                +"\ná opressão e a lutar pela paz."
-                +"\nNo final, Anakin encontrou satisfação em sua escolha de observar e aprender com o passado. Ele acreditava que," 
-                +"\nao compreender plenamente a historia, a galaxia teria uma chance maior de forjar um futuro melhor e mais justo, evitando os" 
-                +"\nerros que levaram à criação do Imperio Galactico." 
-                +"\nE assim, a historia de Anakin, o jovem curioso de Naboo, que descobriu o poder do tempo, culminou em uma jornada de" 
-                +"\naprendizado e sabedoria. Sua escolha de observar, em vez de intervir, teve um impacto indireto na galaxia, permitindo que as" 
-                +"\nfuturas gerações construissem um futuro mais brilhante e livre de tirania." 
+        System.out.println("\n\n  Apesar de sentir uma forte vontade de intervir e tentar impedir a criação do Império Galáctico, Anakin decidiu"
+                +"\nrespeitar a linha do tempo estabelecida e optou por observar de longe, sem interferir diretamente nos eventos que levariam à"
+                +"\nascensão do Império. Anakin compreendeu que mesmo suas melhores intenções poderiam desencadear consequências imprevisíveis e" 
+                +"\npotencialmente piores. Ele reconheceu que a história é um resultado complexo de diversos fatores e que tentar alterá-la poderia" 
+                +"\nter ramificações negativas para a galáxia."
+                +"\nNo entanto, enquanto Anakin se mantinha como um observador atento, ele acabou sendo capturado pelo Império Galáctico," 
+                +"\nque também descobriu sua identidade como um jovem Jedi. O Conde Dookan, ciente disso, decidiu matá-lo, pondo fim à sua história e" 
+                +"\ntendo inicio a ascensão do Império. Dessa forma, a jornada de Anakin chegou a um fim abrupto, antes mesmo de ter a oportunidade de" 
+                +"\ncompartilhar seu conhecimento e experiência. futuras gerações construissem um futuro mais brilhante e livre de tirania." 
                 );
     }
 }

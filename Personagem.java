@@ -1,25 +1,22 @@
 public class Personagem{
 
     String nome = "";
-    int ano = 0;
-    String status = "";
-    String poder = "";
+    int força = 0;
+    String arma = "";
 
-    public Personagem(String nome, int ano, String status, String poder){
+    public Personagem(String nome, int força, String arma){
         this.nome = nome;
-        this.ano = ano;
-        this.status = status;
+        this.força = força;
+        this.arma = arma;
+        
     }
 
-    void morrer(String status, int ano){
-        this.status = status;
-        this.ano = ano;
-        System.out.print("---> " + this.ano + " Ao final da jornada " + this.nome  
-        + " acabou tento sua sentença de " + this.status);
+    static void nivelAtual(String nome,String arma, int força){
+        System.out.println("\n---> "+ nome +" e o "+ arma +" totalizam uma força de: " + força );
+
     }
-    void armamento(String poder){
-        this.poder = poder;
-        System.out.println(" por um golpe brutal de " + this.poder+".");
+    static void morte(String nome, String arma){
+        System.out.println("---> " + nome + " acabou sendo morto por um golpe com " + arma);
     }
 
 

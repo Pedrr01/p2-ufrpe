@@ -1,7 +1,7 @@
 public class Escolha {
     private String texto;
     private Capitulo proximoCapitulo;
-    private Capitulo introducao; // Reference to the root chapter
+    private Capitulo introducao; 
 
     public Escolha(String texto, Capitulo proximoCapitulo, Capitulo introducao) {
         this.texto = texto;

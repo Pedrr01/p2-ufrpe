@@ -4,7 +4,7 @@ public class Capitulo {
     private String titulo;
     private String conteudo;
     private Escolha[] escolhas;
-    private Capitulo introducao; // Reference to the root chapter
+    private Capitulo introducao;
 
     public Capitulo(String titulo, String conteudo) {
         this.titulo = titulo;

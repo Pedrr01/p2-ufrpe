@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class ProjectP2 {
     public static void main(String[] args) {
+ 
         Capitulo introducao = new Capitulo("The Time Trek", "Era uma vez uma cidade chamada Naboo, que vivia sob um forte regime"
                 + "\nimperial, nela se encontrava um jovem conhecido por Anakin, um rapaz curioso que buscava"
                 + "\naventuras e enigmas a desvendar. Em um determinado dia, durante sua exploração no sótão da"
@@ -15,7 +16,7 @@ public class ProjectP2 {
                 + "\nera o momento perfeito para embarcar em uma aventura. Entretanto, ele sabia que uma"
                 + "\nescolha crucial deveria ser feita. O dispositivo de viagem temporal permitia-lhe decidir entre"
                 + "\npercorrer o passado ou desvendar o futuro.");
-
+      
         Capitulo passado = new Capitulo("PASSADO", "Anakin pensou cuidadosamente sobre sua escolha, consciente de que viajar para o passado"
                 + "\ne intervir em eventos históricos poderia ter consequências imprevisíveis. No entanto, a oportunidade"
                 + "\nde presenciar em primeira mão os eventos que levaram à criação do Império Galáctico despertou"
@@ -30,7 +31,7 @@ public class ProjectP2 {
                 + "\nDiante dessa realidade, Anakin enfrentou a escolha mais desafiadora de sua vida. Ele sabia que sua"
                 + "\nintervenção poderia alterar o curso da história e, talvez, evitar a ascensão do Império."
                 + "\nNo entanto, ele também reconhecia que poderia desencadear uma série de eventos ainda piores.");
-
+        
         Capitulo intervir = new Capitulo("A INTERVENÇÃO", "Impulsionado por seu senso de justiça e determinação, Anakin decidiu intervir e tentar"
                 + "\nimpedir a criação do Império. Ele conseguiu se infiltrar nas organizações que estavam prestes a"
                 + "\ntomar o poder, pois já sabia que Conde Dookan era peça-chave nos planos dos líderes autoritários."
@@ -49,6 +50,7 @@ public class ProjectP2 {
                 + "\no curso da história, salvando inúmeras vidas e evitando a criação do Império."
                 + "\nSua coragem e ousadia foram fundamentais para a restauração da paz em Naboo.");
 
+       
         Capitulo nãointervir = new Capitulo("A CAPTURA", "Apesar de sentir uma forte vontade de intervir e tentar impedir a criação do Império,"
                 + "\nAnakin decidiu respeitar a linha do tempo e optou por observar de longe, sem interferir"
                 + "\ndiretamente nos eventos que levariam à ascensão do Império. Anakin compreendeu que mesmo suas melhores"

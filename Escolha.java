@@ -1,7 +1,11 @@
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 public class Escolha {
     private String texto;
     private Capitulo proximoCapitulo;
-    private Capitulo introducao; 
+    private Capitulo introducao;
 
     public Escolha(String texto, Capitulo proximoCapitulo, Capitulo introducao) {
         this.texto = texto;

@@ -1,3 +1,6 @@
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 public class Capitulo {
@@ -6,10 +9,18 @@ public class Capitulo {
     private Escolha[] escolhas;
     private Capitulo introducao;
 
-    public Capitulo(String titulo, String conteudo) {
+    public Capitulo(String titulo) {
         this.titulo = titulo;
-        this.conteudo = conteudo;
+        carregarConteudo();
+    }
 
+    private void carregarConteudo() {
+        try {
+            String conteudoCapitulo = new String(Files.readAllBytes(Paths.get("resources/" + titulo + ".txt")));
+            this.conteudo = conteudoCapitulo;
+        } catch (IOException e) {
+            System.out.println("Erro ao carregar o conteúdo do capítulo: " + e.getMessage());
+        }
     }
 
     public void setEscolhas(Escolha[] escolhas) {
@@ -53,30 +64,7 @@ public class Capitulo {
     }
 
     public void executar() {
-        Personagem Luke = new Personagem("Luke", 65, "Sem Arma");
-        Personagem Kenobi = new Personagem("Jedi Kenobi", 80, "Sabre Negro");
-        Personagem DarthSidious = new Personagem("Darth Sidious", 80, "Sabre de Luz");
-        Personagem DarthMaul = new Personagem("Darth Maul", 60, "Force Pike");
-
         mostrar();
-         if (this.titulo == "FUTURO") {
-            System.out.println("");
-            Luke.setArma("o Sabre Negro");
-            Luke.setForça(85);
-            Kenobi.setArma("Sem Arma");
-            Kenobi.setForça(60);
-            Luke.getStatusAtual(); 
-        }else if(this.titulo == "A INTERVENÇÃO"){
-            System.out.println("");
-            Luke.setArma("o Sabre de Luz");
-            Luke.setForça(75);
-            Luke.getStatusAtual(); 
-        }else if(this.titulo == "A CAPTURA"){
-            System.out.println("");
-            Luke.setArma("Sem Arma");
-            Luke.setForça(55);
-            Luke.getStatusAtual(); 
-        }
         escolher();
     }
 }

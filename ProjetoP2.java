@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 public class ProjetoP2 {
     public static void main(String[] args) {
-
-        Capitulo introducao = new Capitulo("introducao");
+        
+        Capitulo introducao = new CapituloImagem("introducao", "imgintro");
         Capitulo passado = new Capitulo("passado");
-        Capitulo intervir = new Capitulo("intervir");
-        Capitulo nãointervir = new Capitulo("naointervir");
-        Capitulo futuro = new Capitulo("futuro");
+        Capitulo futuro = new CapituloImagem("futuro", "imgfuturo");
+        Capitulo intervir = new CapituloImagem("intervir", "imgintervir");
+        Capitulo nãointervir = new CapituloImagem("naointervir", "imgnaointevir");
 
         Escolha escolhaIrPassado = new Escolha("ir para o passado", passado, introducao);
         Escolha escolhaIrFuturo = new Escolha("ir para o futuro", futuro, introducao);
